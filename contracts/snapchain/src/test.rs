@@ -1,8 +1,7 @@
 #![cfg(test)]
 
-extern crate std;
 use super::*;
-use soroban_sdk::{testutils::{Address as _, EnvTestConfig, Events}, vec, Address, Env, IntoVal, String};
+use soroban_sdk::{testutils::{Address as _, EnvTestConfig}, Address, Env, String};
 
 #[test]
 fn test() {
@@ -20,40 +19,23 @@ fn test() {
     let msg1 = String::from_str(&env, "We have been trying to reach you about your car's extended warranty");
     let msg2 = String::from_str(&env, "straight to voicemail");
 
+    env.as_contract(&contract_address, || {
+        assert!(env.storage().instance().get::<_, u32>(&INDEX).is_none());
+    });
     client.send(&author0, &msg0);
-    assert_eq!(
-        env.events().all(),
-        vec![
-            &env,
-            (
-                contract_address.clone(),
-                (author0,).into_val(&env),
-                0u32.into_val(&env)
-            )
-        ]
-    );
+    env.as_contract(&contract_address, || {
+        assert_eq!(env.storage().instance().get::<_, u32>(&INDEX).unwrap(), 1);
+        assert_eq!(env.storage().temporary().get::<_, ChatMessage>(&Storage::Chat(0)).unwrap().message, msg0);
+    });
+
     client.send(&author1, &msg1);
-    assert_eq!(
-        env.events().all(),
-        vec![
-            &env,
-            (
-                contract_address.clone(),
-                (author1,).into_val(&env),
-                1u32.into_val(&env)
-            )
-        ]
-    );
+    env.as_contract(&contract_address, || {
+        assert_eq!(env.storage().instance().get::<_, u32>(&INDEX).unwrap(), 2);
+        assert_eq!(env.storage().temporary().get::<_, ChatMessage>(&Storage::Chat(1)).unwrap().message, msg1);
+    });
     client.send(&author2, &msg2);
-    assert_eq!(
-        env.events().all(),
-        vec![
-            &env,
-            (
-                contract_address.clone(),
-                (author2,).into_val(&env),
-                2u32.into_val(&env)
-            )
-        ]
-    );
+    env.as_contract(&contract_address, || {
+        assert_eq!(env.storage().instance().get::<_, u32>(&INDEX).unwrap(), 3);
+        assert_eq!(env.storage().temporary().get::<_, ChatMessage>(&Storage::Chat(2)).unwrap().message, msg2);
+    });
 }
