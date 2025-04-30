@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+!/snapchain_sdk/dist
 dist-ssr
 *.local
 
