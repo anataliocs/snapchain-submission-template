@@ -1,5 +1,3 @@
-import './style.css'
-
 import { ChatLog } from './chitChat.ts'
 import { signup, login, logout } from './passkeys.ts'
 import { getPasskeyId, getContractId } from './storage.ts'
