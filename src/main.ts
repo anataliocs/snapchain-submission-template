@@ -3,7 +3,7 @@ import './style.css'
 import { ChatLog } from './chitChat.ts'
 import { signup, login, logout } from './passkeys.ts'
 import { getPasskeyId, getContractId } from './storage.ts'
-import { copyToClipboard, truncate, scrollToBottom, scrollToTop } from './utils.ts';
+import { copyToClipboard, truncate } from './utils.ts';
 
 // initialize
 const storedPasskeyId = getPasskeyId();
