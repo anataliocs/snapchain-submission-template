@@ -1,6 +1,3 @@
-import { xdr, Address, nativeToScVal } from '@stellar/stellar-sdk'
-import { networks } from 'snapchain_sdk'
-
 export function setIsLoading(element: HTMLButtonElement, isLoading: boolean) {
     element.ariaBusy = `${isLoading}`
     element.disabled = isLoading
@@ -15,17 +12,10 @@ export async function copyToClipboard(text: string) {
     alert('copied text to clipboard')
 }
 
-export function createChatLedgerKeys(index: number): xdr.LedgerKey[] {
-    return Array.from({ length: index}, (_, i) => index - i).map((c) =>
-        xdr.LedgerKey.contractData(
-            new xdr.LedgerKeyContractData({
-                contract: new Address(networks.testnet.contractId).toScAddress(),
-                key: nativeToScVal([
-                    nativeToScVal('Chat', { type: 'symbol' }),
-                    nativeToScVal(c - 1, { type: 'u32' }),
-                ]),
-                durability: xdr.ContractDataDurability.temporary(),
-            })
-        )
-    );
+export function scrollToTop() {
+    window.scrollTo(0, 0)
+}
+
+export function scrollToBottom() {
+    window.scrollTo(0, document.body.scrollHeight)
 }
