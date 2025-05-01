@@ -25,8 +25,17 @@
     background-color:var(--pico-color-pumpkin-50);
 }
 
+body {
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+}
+
 #sendButton {
     margin-bottom: 0;
+}
+body > main {
+    flex: 1 0 auto;
 }
 
 body > footer {
