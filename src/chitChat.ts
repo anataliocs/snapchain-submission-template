@@ -23,6 +23,11 @@ export class ChatLog {
     }
 
     renderMessages() {
+        if (!Object.keys(this.messages).length) {
+            this.element.innerHTML = `<p>No messages to display...</p>`
+            return
+        }
+
         let messageElements = Object.entries(this.messages)
             .map(([_, chatMessage]) => renderMessage(chatMessage))
         this.element.replaceChildren(...messageElements)
@@ -98,6 +103,8 @@ function renderMessage({author, message, timestamp}: ChatMessage): HTMLElement {
     // create he message paragraph element
     const messageP = document.createElement('p')
     messageP.textContent = message
+
+    // TODO: Add some kind of "save message" button that will extend the ledger entry's TTL
 
     // assemble the card
     nav.append(smallAuthor, smallTimestamp)
