@@ -3,7 +3,8 @@ import './style.css'
 import { ChatLog } from './chitChat.ts'
 import { signup, login, logout } from './passkeys.ts'
 import { getPasskeyId, getContractId } from './storage.ts'
-import { copyToClipboard, truncate } from './utils.ts';
+import { copyToClipboard } from './utils.ts';
+import { stellarExpertLink } from './stellar.ts';
 
 // initialize
 const storedPasskeyId = getPasskeyId();
@@ -15,10 +16,7 @@ if (storedPasskeyId && storedContractId) {
     const expertLinkListItem = document.createElement('li')
     const logoutListItem = document.createElement('li')
 
-    const expertLinkAnchor = document.createElement('a')
-    expertLinkAnchor.href = `https://stellar.expert/explorer/${import.meta.env.VITE_NETWORK_NAME}/contract/${storedContractId}`
-    expertLinkAnchor.target = '_blank'
-    expertLinkAnchor.textContent = truncate(storedContractId)
+    const expertLinkAnchor = stellarExpertLink(storedContractId);
 
     const clipboardSpan = document.createElement('span')
     clipboardSpan.textContent = '⧉'

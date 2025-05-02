@@ -1,6 +1,7 @@
 import { xdr, Address, nativeToScVal, Contract, scValToNative } from '@stellar/stellar-sdk'
 import { Server } from '@stellar/stellar-sdk/rpc';
 import { networks } from 'snapchain_sdk'
+import { truncate } from './utils';
 
 export const rpc = new Server(import.meta.env.VITE_RPC_URL);
 
@@ -29,4 +30,19 @@ export function createChatLedgerKeys(latestIndex: number): xdr.LedgerKey[] {
             })
         )
     );
+}
+
+export function stellarExpertUrl(address: string): string {
+    return address.startsWith('C')
+        ? `https://stellar.expert/explorer/${import.meta.env.VITE_NETWORK_NAME}/contract/${address}`
+        : `https://stellar.expert/explorer/${import.meta.env.VITE_NETWORK_NAME}/address/${address}`
+}
+
+export function stellarExpertLink(address: string): HTMLAnchorElement {
+    const anchor = document.createElement('a');
+    anchor.href = stellarExpertUrl(address);
+    anchor.target = '_blank';
+    anchor.textContent = truncate(address);
+
+    return anchor
 }
