@@ -10,8 +10,7 @@ With a super-light front-end built with **Vite**.
 **🛠️ Dev Tools**
 
 - 💻 [Stellar CLI](https://developers.stellar.org/docs/tools/cli/install-cli)
-  -
-  Featuring: [Generating Bindings](https://developers.stellar.org/docs/tools/cli/stellar-cli#stellar-contract-bindings)
+	- Featuring: [Generating Bindings](https://developers.stellar.org/docs/tools/cli/stellar-cli#stellar-contract-bindings)
 - ⚙️ [Stellar Javascript SDK](https://developers.stellar.org/docs/tools/sdks/client-sdks#javascript-sdk)
 	- Featuring: [Stellar RPC Server](https://stellar.github.io/js-stellar-sdk/module-rpc.Server.html)
 - 🔐 [Passkey Kit](https://github.com/kalepail/passkey-kit) - Seamless authentication
@@ -384,6 +383,8 @@ Insert rendered markup for each chat message into the placeholder element:
 ```
 
 ---
+
+For more details on how Passkeys and Launchtube work check out the example repo: https://github.com/kalepail/smart-stellar-demo
 
 ## 👀 Want to learn more?
 
