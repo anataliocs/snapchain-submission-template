@@ -2,8 +2,6 @@
 
 ✅️ Challenge 1:  Find a typo or something wrong in this README
 
-Really obvious typo or wrong information 🤷‍♀️🤷‍♂️🤷‍♀️🤷‍♂️
-
 Learn how to build smart contracts on the ✨ [Stellar Network](https://developers.stellar.org/)
 with [smart wallets](https://developers.stellar.org/docs/build/apps/smart-wallets)
 powered by Stellar Dev Tools
