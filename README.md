@@ -1,5 +1,7 @@
 # Stellar Smart Contract Demo: Snapchain
 
+✅️ Challenge 1:  Find a typo or something wrong in this README
+
 Really obvious typo or wrong information 🤷‍♀️🤷‍♂️🤷‍♀️🤷‍♂️
 
 Learn how to build smart contracts on the ✨ [Stellar Network](https://developers.stellar.org/)
