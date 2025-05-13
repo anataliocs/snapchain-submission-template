@@ -17,6 +17,13 @@
 
 # Hackathon Submission
 
+> ⚠️ How to check boxes
+> - [ ] Part 1: Narrative <---- Unchecked
+> - [X] Part 1: Narrative <---- Checked
+>
+> Be sure to check boxes as you complete them!
+
+
 - [ ] Part 1: Narrative
 - [ ] Part 2: Your Minimal Viable Product
 - [ ] Part 3: Technical Docs
@@ -26,6 +33,12 @@
 ## Part 1: Narrative
 
 *A brief explanation of what you are building, what it fixes, who it’s helping, why it’s important, and what’s your value proposition.*
+
+> ⚠️ How to check boxes
+> - [ ] Part 1: Narrative <---- Unchecked
+> - [X] Part 1: Narrative <---- Checked
+>
+> Be sure to check boxes as you complete them!
 
 ** ⚠️ Required Fields Checklist:**
 - [ ] Problem statement
@@ -64,6 +77,13 @@ Describe your experience building on Stellar:
 
 ## Part 2: Your Minimal Viable Product
 
+> ⚠️ How to check boxes
+> - [ ] Part 1: Narrative <---- Unchecked
+> - [X] Part 1: Narrative <---- Checked
+>
+> Be sure to check boxes as you complete them!
+
+** ⚠️ Required Fields Checklist:**
 - [ ] URL to public code repository  
   - [ ] Unique repo name mentioning Stellar:  ```stellar-consensus2025-PROJECT-NAME-HERE```  
   - [ ] Github Repo Description mentioning Stellar  
@@ -103,21 +123,24 @@ passkey-kit: [VERSION USED]
 ```
 
 Deployed contract IDs on Stellar Expert
+
 _Example: https://stellar.expert/explorer/testnet/contract/CDZQVQ573JBURBK4KXKPSTQWBCBCJ5ZRBSFFZ6EIQUS5DIM5EAPYHIDP_
+
 ```text
 https://stellar.expert/explorer/testnet/contract/[Contract]
 
 ```
 
 Optional: Link to deployed front-end
-
+```text
 [Deployed Front-end Link](YOUR%20LINK%20HERE)
+```
 
 ---
 
 ## Part 3: Technical Docs
 
-**Checklist:**
+** ⚠️ Required Fields Checklist:**
 - [ ] Overview: Sentence describing your system at a high-level
 - [ ] Diagrams: Use any common diagram format (flowcharts, components)  
   - [ ] Describe each major component and its function  
@@ -137,6 +160,8 @@ High-level overview
 
 **Diagrams: Use any common diagram format (flowcharts, components)**
 Recommended: https://github.com/mermaid-js/mermaid
+- Describe each major component and its function
+- Describe how components interact
 
 > ℹ NOTE! 
 > Github should automatically render These charts in the README
@@ -154,7 +179,7 @@ C -->|One| D[Result 1: Create Account]
 C -->|Two| E[Result 2: Show Error Message]
 ```
 
-
+Example Sequence Diagram:
 ```mermaid
 sequenceDiagram
 Smart Contract->>Front-end: Function Invocation
@@ -167,3 +192,44 @@ John->>Bob: How about you?
 Bob-->>John: Jolly good!
 ```
 
+
+Design Choices:
+
+What type of storage did you use and why?
+```text
+[Storage durability chosen for various fields and why]
+```
+
+How did you store the contract state?
+```text
+[Types chosen for various variables and why]
+```
+
+What events did you emit (if any)?
+```text
+[Emitted Events]
+```
+
+Describe your passkeys implementation?
+```text
+[How did you use Stellar passkeys?]
+```
+
+What issues did you overcome?
+```text
+[What challenges did you encounter and overcome building on Stellar?]
+```
+
+
+---
+
+#### BONUS QUESTION
+
+Have you built on other blockchain networks?
+- Which other networks?
+- How does the developer experience compare?
+- What can we improve?
+
+```text
+[How does building on Stellar compare to other networks?]
+```
