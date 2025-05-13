@@ -84,7 +84,7 @@ Describe your experience building on Stellar:
 > Be sure to check boxes as you complete them!
 
 ** ⚠️ Required Fields Checklist:**
-- [ ] URL to public code repository  
+- [ ] URL to a public code repository  
   - [ ] Unique repo name mentioning Stellar:  ```stellar-consensus2025-PROJECT-NAME-HERE```  
   - [ ] Github Repo Description mentioning Stellar  
   - [ ] Github Repo Website points at: https://developers.stellar.org/  
@@ -171,6 +171,7 @@ _Examples below!_
 Example Flow Chart:
 
 ```mermaid
+graph TD;
 flowchart LR
 
 A[User] -->|verifyUser()| B(VerifiedUser)
@@ -181,6 +182,8 @@ C -->|Two| E[Result 2: Show Error Message]
 
 Example Sequence Diagram:
 ```mermaid
+graph TD;
+
 sequenceDiagram
 Smart Contract->>Front-end: Function Invocation
 loop Verify Fields
