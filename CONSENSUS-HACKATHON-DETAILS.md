@@ -1,12 +1,16 @@
-# Stellar Toronto Builder Summit—EasyA Consensus Hackathon
+# Stellar Toronto Builder Summit—EasyA Consensus Hackathon 2025
 
 ## Hackathon Submission Template
 
+## [YOUR PROJECT NAME HERE]
+
 *Using this template will ensure all the requirements are met for a valid project submission.*
 
-- Link to original repo [Snapchain Repo](https://github.com/ElliotFriend/snapchain-demo)
-- Hackathon
-  info: [Easy A](https://easya-ltd.notion.site/EasyA-Consensus-Hackathon-Toronto-1debf8719d6d80be9ddfe9f9b0d38397)
+**Link to original repos:**
+  - [snapchain-repo-vanillajs](https://github.com/ElliotFriend/snapchain-demo)
+  - [smart-stellar-demo-astro-svelte](https://github.com/kalepail/smart-stellar-demo)
+  - [smart-stellar-demo-reactjs-nextjs](https://github.com/carstenjacobsen/smart-stellar-demo)
+- Hackathon info: [Easy A](https://easya-ltd.notion.site/EasyA-Consensus-Hackathon-Toronto-1debf8719d6d80be9ddfe9f9b0d38397)
 
 ### Prompt
 
@@ -23,6 +27,17 @@
 ---
 
 # Hackathon Submission
+
+Project Name:
+```text
+[Project Name HERE]
+```
+
+Names of Team Members:
+```text
+- [Team Member Name HERE]
+- [Team Member Name HERE] 
+```
 
 > ⚠️ How to check boxes
 > - [ ] Part 1: Narrative <---- Unchecked

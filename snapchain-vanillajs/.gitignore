@@ -26,4 +26,6 @@ dist-ssr
 
 snapchain-vanillajs/snapchain_sdk/.env.example
 !snapchain-vanillajs/snapchain_sdk/.env.example
+node_modules
 target
+.idea
