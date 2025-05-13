@@ -20,5 +20,7 @@ rm -rf scripts
 rm choose-front-end-framework.md
 fi
 
+echo "Now open the README and follow the steps"
+
 
 
