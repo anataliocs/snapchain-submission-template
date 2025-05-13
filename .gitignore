@@ -28,3 +28,4 @@ dist-ssr
 !.env.example
 node_modules
 target
+.idea
