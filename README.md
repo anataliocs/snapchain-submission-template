@@ -172,8 +172,6 @@ Example Flow Chart:
 
 ```mermaid
 graph TD;
-flowchart LR
-
 A[User] -->|verifyUser()| B(VerifiedUser)
 B --> C{Approve User}
 C -->|One| D[Result 1: Create Account]
@@ -183,8 +181,6 @@ C -->|Two| E[Result 2: Show Error Message]
 Example Sequence Diagram:
 ```mermaid
 graph TD;
-
-sequenceDiagram
 Smart Contract->>Front-end: Function Invocation
 loop Verify Fields
 John->>John: Verified
