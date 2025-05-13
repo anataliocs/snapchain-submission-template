@@ -14,7 +14,10 @@ if [ -d snapchain-vanillajs  ] ; then
 fi
 
 if [ -d smart-stellar-demo-astro-svelte ] ; then
-[ -f smart-stellar-demo-astro-svelte ] && mv smart-stellar-demo-astro-svelte .
+cp -R "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-astro-svelte/* "${CODESPACE_VSCODE_FOLDER}"
+rm -rf smart-stellar-demo-astro-svelte
+rm -rf scripts
+rm choose-front-end-framework.md
 fi
 
 

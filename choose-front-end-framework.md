@@ -26,20 +26,4 @@ We have created 3 different flavors of project for you.
 
 ---
 
-**Re-download snapchain-vanillajs**
-
-```text
-curl -J -L -O https://github.com/carstenjacobsen/smart-stellar-demo/archive/refs/heads/main.zip
-```
-
-**Re-download smart-stellar-demo-reactjs-nextjs**
-
-```text
-curl -J -L -O https://github.com/carstenjacobsen/smart-stellar-demo/archive/refs/heads/main.zip
-```
-
-**Re-download smart-stellar-demo-astro-svelte**
-
-```text
-curl -J -L -O https://github.com/carstenjacobsen/smart-stellar-demo/archive/refs/heads/main.zip
-```
+Alternatively, you can manually pick and choose the files you want and move them into the root directory

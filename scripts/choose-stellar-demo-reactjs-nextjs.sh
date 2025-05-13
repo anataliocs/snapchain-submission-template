@@ -14,7 +14,10 @@ if [ -d snapchain-vanillajs ] ; then
 fi
 
 if [ -d smart-stellar-demo-reactjs-nextjs ] ; then
-[ -f smart-stellar-demo-reactjs-nextjs ] && mv smart-stellar-demo-reactjs-nextjs .
+cp -R "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-reactjs-nextjs/* "${CODESPACE_VSCODE_FOLDER}"
+rm -rf smart-stellar-demo-reactjs-nextjs
+rm -rf scripts
+rm choose-front-end-framework.md
 fi
 
 
