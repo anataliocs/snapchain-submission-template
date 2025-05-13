@@ -1,7 +1,7 @@
 # Stellar Toronto Builder Summit - EasyA Consensus Hackathon
 ## Hackathon Submission Template
 
-*Using this template will ensure all the requirements are met for a validation project submission.*
+*Using this template will ensure all the requirements are met for a valid project submission.*
 
 - Link to original repo [Snapchain Repo](https://github.com/ElliotFriend/snapchain-demo)
 - Hackathon info: [Easy A](https://easya-ltd.notion.site/EasyA-Consensus-Hackathon-Toronto-1debf8719d6d80be9ddfe9f9b0d38397)
@@ -15,17 +15,155 @@
 
 ---
 
-## Hackathon Submission
+# Hackathon Submission
 
-### Narrative Document
+- [ ] Part 1: Narrative
+- [ ] Part 2: Your Minimal Viable Product
+- [ ] Part 3: Technical Docs
+
+---
+
+## Part 1: Narrative
 
 *A brief explanation of what you are building, what it fixes, who it’s helping, why it’s important, and what’s your value proposition.*
 
-Checklist:
-[] - Problem statement
-[] - User base
-[] - Impact
-[] - Why Stellar: How do you leverage Stellar Passkeys to provide a seamless and intuitive UX?
-[] - Describe your experience building on Stellar
+** ⚠️ Required Fields Checklist:**
+- [ ] Problem statement
+- [ ] User base
+- [ ] Impact
+- [ ] Why Stellar: How do you leverage Stellar Passkeys to provide a seamless and intuitive UX?
+- [ ] Describe your experience building on Stellar
 
+**Problem statement:**
+```text
+[Write Problem statement here]
+```
+
+User base
+```text
+[Write User base estimate here and link sources]
+```
+
+Impact
+```text
+[Write Problem statement here]
+```
+
+Why Stellar: How do you leverage Stellar Passkeys to provide a seamless and intuitive UX?
+```text
+[Why did you choose Stellar?  Be specific.]
+```
+
+Describe your experience building on Stellar:
+```text
+[Negative feedback here is encouraged!!!  It will not impact your score.  We want to make the experience better!]
+```
+✨Extra points for valuable, actionable negative feedback that helps use improve the developer experience.
+
+---
+
+## Part 2: Your Minimal Viable Product
+
+- [ ] URL to public code repository  
+  - [ ] Unique repo name mentioning Stellar:  ```stellar-consensus2025-PROJECT-NAME-HERE```  
+  - [ ] Github Repo Description mentioning Stellar  
+  - [ ] Github Repo Website points at: https://developers.stellar.org/  
+  - [ ] Github Repo Topics include: “stellar”, “rust”, “smart-contracts”, “consensus-toronto-2025”
+- [ ] README.md MUST contain  
+  - [ ] List of implemented features  
+  - [ ] List of technologies used to build the project   
+  - [ ] Must include Stellar SDK, Passkeys, and Launchtube:  
+  - [ ] [https://github.com/kalepail/passkey-kit](https://github.com/kalepail/passkey-kit)  
+  - [ ] [https://github.com/stellar/launchtube](https://github.com/stellar/launchtube)  
+  - [ ] [https://github.com/stellar/js-stellar-sdk](https://github.com/stellar/js-stellar-sdk) 
+  - [ ] Deployed contract IDs with Stellar Expert Links  
+  - [ ] Optional: Link to deployed front-end
+- [ ] Contract Code: Well-commented, functional Rust code
+- [ ] Client Code: Front-end UI code with smart contract bindings and Passkeys integration
+- [ ] Deployed Artifacts:   
+  - [ ] Optional: Link to automated test execution  
+  - [ ] Optional: Automated Build artifacts
+
+
+List of implemented features:
+```text
+- [Feature 1]
+- [Feature 2]
+```
+
+List of technologies used to build the project:
+```text
+- [Example: Typescript]
+- [Example: Rust]
+```
+⚠️ Must include Stellar SDK, Passkeys, and Launchtube:
+```text
+@stellar/stellar-sdk: [VERSION USED]
+passkey-kit: [VERSION USED]
+```
+
+Deployed contract IDs on Stellar Expert
+_Example: https://stellar.expert/explorer/testnet/contract/CDZQVQ573JBURBK4KXKPSTQWBCBCJ5ZRBSFFZ6EIQUS5DIM5EAPYHIDP_
+```text
+https://stellar.expert/explorer/testnet/contract/[Contract]
+
+```
+
+Optional: Link to deployed front-end
+
+[Deployed Front-end Link](YOUR%20LINK%20HERE)
+
+---
+
+## Part 3: Technical Docs
+
+**Checklist:**
+- [ ] Overview: Sentence describing your system at a high-level
+- [ ] Diagrams: Use any common diagram format (flowcharts, components)  
+  - [ ] Describe each major component and its function  
+  - [ ] Describe how components interact
+- [ ] Design Choices:   
+  - [ ] What type of storage did you use and why?  
+  - [ ] How did you store the contract state?  
+  - [ ] What events did you emit (if any)?  
+  - [ ] Describe your passkeys implementation?  
+  - [ ] What issues did you overcome?
+
+Overview: Sentence describing your system at a high-level
+
+```text
+High-level overview
+```
+
+**Diagrams: Use any common diagram format (flowcharts, components)**
+Recommended: https://github.com/mermaid-js/mermaid
+
+> ℹ NOTE! 
+> Github should automatically render These charts in the README
+
+_Examples below!_
+
+Example Flow Chart:
+
+```mermaid
+flowchart LR
+
+A[User] -->|verifyUser()| B(VerifiedUser)
+B --> C{Approve User}
+C -->|One| D[Result 1: Create Account]
+C -->|Two| E[Result 2: Show Error Message]
+```
+
+
+```mermaid
+sequenceDiagram
+Smart Contract->>Front-end: Function Invocation
+loop Verify Fields
+John->>John: Verified
+end
+Note right of Function Invocation: This user was verified
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+```
 
