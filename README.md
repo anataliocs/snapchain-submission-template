@@ -158,12 +158,17 @@ Overview: Sentence describing your system at a high-level
 High-level overview
 ```
 
-**Diagrams: Use any common diagram format (flowcharts, components)**
+### Diagrams: Use any common diagram format (flowcharts, components)
+
 Recommended: https://github.com/mermaid-js/mermaid
 - Describe each major component and its function
 - Describe how components interact
+- Find chart examples here: https://www.mermaidchart.com/play
 
-> ℹ NOTE! 
+> ⚠️ Use VS Code plugin to preview charts: 
+> https://docs.mermaidchart.com/plugins/visual-studio-code
+
+> ⚠️ NOTE! 
 > Github should automatically render These charts in the README
 
 _Examples below!_
@@ -172,23 +177,64 @@ Example Flow Chart:
 
 ```mermaid
 graph TD;
-A[User] -->|verifyUser()| B(VerifiedUser)
+A[User] -->|verifyUser| B(VerifiedUser)
 B --> C{Approve User}
-C -->|One| D[Result 1: Create Account]
-C -->|Two| E[Result 2: Show Error Message]
+C -->|One| D[Result1Create Account]
+C -->|Two| E[Result2Show Error Message]
 ```
 
-Example Sequence Diagram:
+Example Diagram:
 ```mermaid
-graph TD;
-Smart Contract->>Front-end: Function Invocation
-loop Verify Fields
-John->>John: Verified
-end
-Note right of Function Invocation: This user was verified
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
+flowchart LR
+    a[Chapter 1] --> b[Chapter 2] --> c[Chapter 3]
+    c-->d[Using Ledger]
+    c-->e[Using Trezor]
+    d-->f[Chapter 4]
+    e-->f
+```
+
+Decision Tree
+```mermaid
+graph TB
+A("Do you think online service learning is right for you?")
+B("Do you have time to design a service learning component?")
+C("What is the civic or public purpose of your discipline? How do you teach that without service learning?")
+D("Do you have departmental or school support to plan and implement service learning?")
+E["Are you willing to be a trailblazer?"]
+F["What type of service learning to you want to plan?"]
+
+A==Yes==>B
+A--No-->C
+B==Yes==>D
+B--No-->E
+D--Yes-->F
+D--No-->E
+E--Yes-->F
+E--No-->C
+```
+
+Sequence Diagram:
+```mermaid
+sequenceDiagram
+Alice ->> Bob: Hello Bob, how are you?
+Bob-->>John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+Bob-->Alice: Checking with John...
+Alice->John: Yes... John, how are you?
+```
+
+State Diagram:
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
 ```
 
 
