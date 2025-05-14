@@ -102,7 +102,7 @@
   "initializeCommand": "",
   "onCreateCommand": "chmod +x .devcontainer/post_start_cli_autocomplete.sh && chmod +x .devcontainer/post_attach_welcome_text.sh",
   "updateContentCommand": "",
-  "postCreateCommand": "",
+  "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts && pnpm setup && source /home/vscode/.zshrc",
   "postStartCommand": ".devcontainer/post_start_cli_autocomplete.sh",
   "postAttachCommand": ".devcontainer/post_attach_welcome_text.sh",
   "waitFor": "postStartCommand"
