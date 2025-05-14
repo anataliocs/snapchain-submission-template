@@ -14,7 +14,7 @@ if [ -d snapchain-vanillajs  ] ; then
 fi
 
 if [ -d smart-stellar-demo-astro-svelte ] ; then
-cp "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-reactjs-nextjs/.env.development "${CODESPACE_VSCODE_FOLDER}/.env"   
+cp "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-astro-svelte/.env.development "${CODESPACE_VSCODE_FOLDER}/.env"   
 cp -R "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-astro-svelte/* "${CODESPACE_VSCODE_FOLDER}"
 rm -rf smart-stellar-demo-astro-svelte
 rm -rf scripts
