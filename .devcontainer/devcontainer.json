@@ -72,6 +72,10 @@
         "terminal.integrated.useWslProfiles": false,
         "terminal.integrated.sendKeybindingsToShell": true,
         "terminal.integrated.allowChords": true,
+        "rust-analyzer.check.allTargets": false,
+        "rust-analyzer.cargo.allTargets": false,
+        "rust-analyzer.procMacro.attributes.enable": false,
+        "rust-analyzer.lens.enable": false,
         "files.readonlyInclude": {
           "**/.cargo/registry/src/**/*.rs": true,
           "**/.cargo/git/checkouts/**/*.rs": true,
@@ -85,5 +89,6 @@
   "updateContentCommand": "",
   "postCreateCommand": "",
   "postStartCommand": ".devcontainer/post_start_cli_autocomplete.sh",
-  "postAttachCommand": ".devcontainer/post_attach_welcome_text.sh"
+  "postAttachCommand": ".devcontainer/post_attach_welcome_text.sh",
+  waitFor: "postStartCommand"
 }
