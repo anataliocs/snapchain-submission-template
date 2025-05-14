@@ -22,5 +22,6 @@ echo "  👩‍🔬 Stellar Lab(cmd+click) 🔗 https://lab.stellar.org/"
 echo ""
 echo "  Welcome to the Consensus 2025: Stellar Toronto Builder Summit EasyA Hackathon!!!"
 echo "  Open choose-front-end-framework.md to choose a front-end framework"
+echo "  Join our Discord:  https://discord.gg/stellardev"
 
 

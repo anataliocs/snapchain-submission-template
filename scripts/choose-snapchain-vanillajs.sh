@@ -14,6 +14,7 @@ if [ -d smart-stellar-demo-astro-svelte ] ; then
 fi
 
 if [ -d snapchain-vanillajs ] ; then
+cp "${CODESPACE_VSCODE_FOLDER}"/snapchain-vanillajs/.env.example "${CODESPACE_VSCODE_FOLDER}/.env"   
 cp -R "${CODESPACE_VSCODE_FOLDER}"/snapchain-vanillajs/* "${CODESPACE_VSCODE_FOLDER}"
 rm -rf snapchain-vanillajs
 rm -rf scripts
@@ -21,6 +22,15 @@ rm choose-front-end-framework.md
 fi
 
 echo "Now open the README and follow the steps"
+echo ""
+echo "Start client"
+echo "pnpm install"
+echo "pnpm dev"
+echo ""
+echo "Make port 5173 public"
+echo "gh codespace ports visibility --codespace ${CODESPACE_NAME} 80:public 5173:public 3000:public 8080:public"
+
+
 
 
 

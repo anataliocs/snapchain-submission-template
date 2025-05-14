@@ -22,7 +22,22 @@
   "portsAttributes": {
     "4226": {
       "label": "sccache",
-      onAutoForward: "silent"
+      "onAutoForward": "silent"
+    },
+    "80": {
+      "label": "http",
+      "onAutoForward": "openPreview",
+      elevateIfNeeded: true
+    },
+    "5173": {
+      "label": "vite",
+      "onAutoForward": "openPreview",
+      "elevateIfNeeded": true
+    },
+    "3000": {
+      "label": "astro",
+      "onAutoForward": "openPreview",
+      "elevateIfNeeded": true
     }
   },
   "features": {
@@ -90,5 +105,5 @@
   "postCreateCommand": "",
   "postStartCommand": ".devcontainer/post_start_cli_autocomplete.sh",
   "postAttachCommand": ".devcontainer/post_attach_welcome_text.sh",
-  waitFor: "postStartCommand"
+  "waitFor": "postStartCommand"
 }
