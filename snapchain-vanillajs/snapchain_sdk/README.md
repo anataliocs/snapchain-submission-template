@@ -12,7 +12,7 @@ soroban contract bindings ts \
   --output-dir ./path/to/snapchain_sdk
 ```
 
-The network passphrase and contract ID are exported from [index.ts](src/index.ts) in the `networks` constant. If you are the one who generated this library and you know that this contract is also deployed to other networks, feel free to update `networks` with other valid options. This will help your contract consumers use this library more easily.
+The network passphrase and contract ID are exported from [index.ts](./src/index.ts) in the `networks` constant. If you are the one who generated this library and you know that this contract is also deployed to other networks, feel free to update `networks` with other valid options. This will help your contract consumers use this library more easily.
 
 # To publish or not to publish
 
@@ -41,14 +41,14 @@ Obviously you need to adjust the above command based on the actual command you u
 Now that you have your library up-to-date and added to your project, you can import it in a file and see inline documentation for all of its exported methods:
 
 ```js
-import {Contract, networks} from "snapchain-vanillajs/snapchain_sdk/dist/index"
+import { Contract, networks } from "snapchain_sdk"
 
 const contract = new Contract({
-    ...networks.futurenet, // for example; check which networks this library exports
-    rpcUrl: '...', // use your own, or find one for testing at https://soroban.stellar.org/docs/reference/rpc#public-rpc-providers
+  ...networks.futurenet, // for example; check which networks this library exports
+  rpcUrl: '...', // use your own, or find one for testing at https://soroban.stellar.org/docs/reference/rpc#public-rpc-providers
 })
 
-contract. |
+contract.|
 ```
 
 As long as your editor is configured to show JavaScript/TypeScript documentation, you can pause your typing at that `|` to get a list of all exports and inline-documentation for each. It exports a separate [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function for each method in the smart contract, with documentation for each generated from the comments the contract's author included in the original source code.

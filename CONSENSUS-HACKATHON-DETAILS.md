@@ -7,9 +7,9 @@
 *Using this template will ensure all the requirements are met for a valid project submission.*
 
 **Link to original repos:**
-  - [snapchain-repo-vanillajs](https://github.com/ElliotFriend/snapchain-demo)
-  - [smart-stellar-demo-astro-svelte](https://github.com/kalepail/smart-stellar-demo)
-  - [smart-stellar-demo-reactjs-nextjs](https://github.com/carstenjacobsen/smart-stellar-demo)
+- [snapchain-repo-vanillajs](https://github.com/ElliotFriend/snapchain-demo)
+- [smart-stellar-demo-astro-svelte](https://github.com/kalepail/smart-stellar-demo)
+- [smart-stellar-demo-reactjs-nextjs](https://github.com/carstenjacobsen/smart-stellar-demo)
 - Hackathon info: [Easy A](https://easya-ltd.notion.site/EasyA-Consensus-Hackathon-Toronto-1debf8719d6d80be9ddfe9f9b0d38397)
 
 ### Prompt

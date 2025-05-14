@@ -24,8 +24,7 @@ dist-ssr
 *.sln
 *.sw?
 
-snapchain-vanillajs/snapchain_sdk/.env.example
-!snapchain-vanillajs/snapchain_sdk/.env.example
+.env*
+!.env.example
 node_modules
 target
-.idea
