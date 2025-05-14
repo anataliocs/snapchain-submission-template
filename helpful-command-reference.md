@@ -1,3 +1,9 @@
+Get new launchtube token
+
+```text
+curl https://testnet.launchtube.xyz/gen | jq '.[0]'
+```
+
 # Stellar CLI
 Stellar CLI Manual: https://developers.stellar.org/docs/tools/cli/stellar-cli
 Full help docs Stellar CLI: https://github.com/stellar/soroban-examples/blob/main/FULL_HELP_DOCS.md

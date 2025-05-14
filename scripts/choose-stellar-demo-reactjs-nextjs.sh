@@ -14,7 +14,7 @@ if [ -d snapchain-vanillajs ] ; then
 fi
 
 if [ -d smart-stellar-demo-reactjs-nextjs ] ; then  
-cp "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-reactjs-nextjs/.env.example "${CODESPACE_VSCODE_FOLDER}/.env" 
+cp "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-reactjs-nextjs/.env.example "${CODESPACE_VSCODE_FOLDER}/.env.base" 
 cp -R "${CODESPACE_VSCODE_FOLDER}"/smart-stellar-demo-reactjs-nextjs/* "${CODESPACE_VSCODE_FOLDER}"
 rm -rf smart-stellar-demo-reactjs-nextjs
 rm -rf scripts
@@ -29,4 +29,7 @@ echo ""
 echo "Make ports public"
 echo "gh codespace ports visibility --codespace ${CODESPACE_NAME} 80:public 5173:public 3000:public 8080:public"
                                                                                                                                                                        
-                                                                            
+echo "Setting Launchtube token for testnet:"
+echo "Replace {LT_JWT_PLACEHOLDER} with Launchtube LT JWT TOKEN"
+launchtube_token=$(curl https://testnet.launchtube.xyz/gen | jq '.[0]') \
+ && sed "s/{LT_JWT_PLACEHOLDER}/${launchtube_token}/g" .env.base > .env                                                                           
