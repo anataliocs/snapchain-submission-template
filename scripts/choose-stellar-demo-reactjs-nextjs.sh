@@ -21,8 +21,11 @@ rm -rf scripts
 rm choose-front-end-framework.md
 fi
 
+pnpm setup && source /home/vscode/.zshrc 
+
 echo "Now open the README and follow the steps"
 echo "Start client"
+echo "pnpm setup && source /home/vscode/.zshrc "
 echo "pnpm install"
 echo "pnpm dev"
 echo ""
