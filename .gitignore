@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 dist
-!/snapchain_sdk/dist
 dist-ssr
 *.local
 
@@ -24,6 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-snapchain-vanillajs/snapchain_sdk/.env.example
-!snapchain-vanillajs/snapchain_sdk/.env.example
 target
