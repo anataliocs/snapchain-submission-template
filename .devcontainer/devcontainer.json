@@ -100,13 +100,16 @@
     }
   },
   "initializeCommand": "",
-  "onCreateCommand": "chmod +x .devcontainer/post_start_cli_autocomplete.sh && chmod +x .devcontainer/post_start_welcome_text.sh",
+  "onCreateCommand": "chmod +x .devcontainer/post_start_cli_autocomplete.sh && chmod +x .devcontainer/post_attach_welcome_text.sh",
   "updateContentCommand": "",
   "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts",
   "postStartCommand": {
     "cli-autocomplete": ".devcontainer/post_start_cli_autocomplete.sh",
-    "welcome-text": ".devcontainer/post_start_welcome_text.sh"
+    "gh-copilot": "gh extension install github/gh-copilot"
   },
-  "postAttachCommand": "stellar keys generate --global alice --network testnet --fund && stellar keys use alice && stellar keys address alice",
+  "postAttachCommand": {
+    "stellar-account" : "stellar keys generate --global alice --network testnet --fund && stellar keys use alice && stellar keys address alice",
+    "welcome-text": ".devcontainer/post_attach_welcome_text.sh"
+  },
   "waitFor": "postStartCommand"
 }

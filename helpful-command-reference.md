@@ -1,7 +1,16 @@
-Get new launchtube token
-
+**Get new launchtube token**
 ```text
 curl https://testnet.launchtube.xyz/gen | jq '.[0]'
+```
+
+Stellar Lab(cmd+click) 🔗 https://lab.stellar.org/"
+
+**Discord Support:**  https://discord.gg/stellardev
+[Stella: AI chat bot for Stellar dev questions](https://discord.com/channels/897514728459468821/1265827786111586344)
+
+**CLI GitHub AI Copilot**
+```
+gh copilot --help
 ```
 
 # Stellar CLI
