@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 set -e
 
 clear
 
-echo "  ⚙️ Setup testnet:"
-echo "     stellar network use testnet"
+echo "  ⚙️ Setup testnet: stellar network use testnet"
 echo ""
 echo "  🆔 Configure an Identity:"
 echo "     stellar keys generate --global alice --network testnet --fund"
