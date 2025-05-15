@@ -9,19 +9,19 @@ We have created 3 different flavors of project for you.
 ## Choose snapchain-vanillajs
 
 ```text
-./scripts/choose-snapchain-vanillajs.sh
+./scripts/vanillajs.sh
 ```
 
 ## Choose stellar-demo-astro-svelte
 
 ```text
-./scripts/choose-stellar-demo-astro-svelte.sh
+./scripts/astro-svelte.sh
 ```
 
 ## Choose stellar-demo-reactjs-nextjs.sh
 
 ```text
-./scripts/choose-stellar-demo-reactjs-nextjs.sh
+./scripts/nextjs.sh
 ```
 
 ---

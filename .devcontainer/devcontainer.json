@@ -52,7 +52,7 @@
     "ghcr.io/devcontainers-extra/features/gh-release:1.0.25": {
       "repo": "stellar/stellar-cli",
       "binaryNames": "stellar",
-      "version": "22.6.0"
+      "version": "22.8.0"
     },
     "ghcr.io/rapidsai/devcontainers/features/sccache:25.6.1": {
       "repository": "mozilla/sccache",
@@ -100,7 +100,7 @@
     }
   },
   "initializeCommand": "",
-  "onCreateCommand": "chmod +x .devcontainer/post_start_cli_autocomplete.sh && chmod +x .devcontainer/post_attach_welcome_text.sh",
+  "onCreateCommand": "chmod +x .devcontainer/post_start_cli_autocomplete.sh && chmod +x .devcontainer/post_start_welcome_text.sh",
   "updateContentCommand": "",
   "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts",
   "postStartCommand": {

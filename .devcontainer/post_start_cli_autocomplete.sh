@@ -1,5 +1,5 @@
 #!/bin/zsh
-set -euxo pipefail
+set -e pipefail
 
 # Add Stellar CLI to $PATH
 chmod 775 ~/.bashrc && chmod 775 ~/.zshrc

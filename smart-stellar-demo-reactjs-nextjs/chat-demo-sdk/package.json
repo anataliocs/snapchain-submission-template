@@ -12,6 +12,7 @@
     "buffer": "^6.0.3"
   },
   "devDependencies": {
+    "@types/node": "^22.15.18",
     "typescript": "^5.8.3"
   }
 }

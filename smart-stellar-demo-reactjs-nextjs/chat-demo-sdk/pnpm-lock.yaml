@@ -10,11 +10,14 @@ importers:
     dependencies:
       '@stellar/stellar-sdk':
         specifier: ^13.2.0
-        version: 13.2.0
+        version: 13.3.0
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
     devDependencies:
+      '@types/node':
+        specifier: ^22.15.18
+        version: 22.15.18
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -28,15 +31,18 @@ packages:
     resolution: {integrity: sha512-90EArG+eCCEzDGj3OJNoCtwpWDwxjv+rs/RNPhvg4bulpjN/CSRj+Ys/SalRcfM4/WRC5/qAfjzmJBAuquWhkA==}
     engines: {node: '>=18.0.0'}
 
-  '@stellar/stellar-sdk@13.2.0':
-    resolution: {integrity: sha512-azxeh1+mS28h96Q+vl41ffytQvWdudRl1KtjYO0TRZb/9u0/lH57oYBeJ+gvcQr+T7s02wTayFdHbKru5V5/XA==}
+  '@stellar/stellar-sdk@13.3.0':
+    resolution: {integrity: sha512-8+GHcZLp+mdin8gSjcgfb/Lb6sSMYRX6Nf/0LcSJxvjLQR0XHpjGzOiRbYb2jSXo51EnA6kAV5j+4Pzh5OUKUg==}
     engines: {node: '>=18.0.0'}
+
+  '@types/node@22.15.18':
+    resolution: {integrity: sha512-v1DKRfUdyW+jJhZNEI1PYy29S2YRxMV5AOO/x/SjKmW0acCIOqmbj6Haf9eHAhsPmrhlHSxEhv/1WszcLWV4cg==}
 
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.8.4:
-    resolution: {integrity: sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==}
+  axios@1.9.0:
+    resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
 
   bare-addon-resolve@1.9.4:
     resolution: {integrity: sha512-unn6Vy/Yke6F99vg/7tcrvM2KUvIhTNniaSqDbam4AWkd4NhvDVSrQiRYVlNzUV2P7SPobkCK7JFVxrJk9btCg==}
@@ -64,8 +70,8 @@ packages:
   bare-semver@1.0.1:
     resolution: {integrity: sha512-UtggzHLiTrmFOC/ogQ+Hy7VfoKoIwrP1UFcYtTxoCUdLtsIErT8+SWtOC2DH/snT9h+xDrcBEPcwKei1mzemgg==}
 
-  bare-url@2.1.5:
-    resolution: {integrity: sha512-lNImB5KLN+ggw+SYDYvqf/yCizXIyq8U/nWBlx7m4pc4TKS24SB/1WWskzGacon5cVVAC6qUzCYzI/aMYCf4Ng==}
+  bare-url@2.1.6:
+    resolution: {integrity: sha512-FgjDeR+/yDH34By4I0qB5NxAoWv7dOTYcOXwn73kr+c93HyC2lU6tnjifqUe33LKMJcDyCYPQjEAqgOQiXkE2Q==}
 
   base32.js@0.1.0:
     resolution: {integrity: sha512-n3TkB02ixgBOhTvANakDb4xaMXnYUVkNoRFJjQflcqMQhyEKxEHdj3E6N8t8sUQ0mjH/3/JxzlXuz3ul/J90pQ==}
@@ -212,6 +218,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
   urijs@1.19.11:
     resolution: {integrity: sha512-HXgFDgDommxn5/bIv0cnQZsPhHDA90NPHD6+c/v21U5+Sx5hoP8+dP9IZXBU1gIfvdRfhG8cel9QNPeionfcCQ==}
 
@@ -230,10 +239,10 @@ snapshots:
     optionalDependencies:
       sodium-native: 4.3.3
 
-  '@stellar/stellar-sdk@13.2.0':
+  '@stellar/stellar-sdk@13.3.0':
     dependencies:
       '@stellar/stellar-base': 13.1.0
-      axios: 1.8.4
+      axios: 1.9.0
       bignumber.js: 9.3.0
       eventsource: 2.0.2
       feaxios: 0.0.23
@@ -243,9 +252,13 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@types/node@22.15.18':
+    dependencies:
+      undici-types: 6.21.0
+
   asynckit@0.4.0: {}
 
-  axios@1.8.4:
+  axios@1.9.0:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.2
@@ -253,19 +266,19 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  bare-addon-resolve@1.9.4(bare-url@2.1.5):
+  bare-addon-resolve@1.9.4(bare-url@2.1.6):
     dependencies:
-      bare-module-resolve: 1.10.2(bare-url@2.1.5)
+      bare-module-resolve: 1.10.2(bare-url@2.1.6)
       bare-semver: 1.0.1
     optionalDependencies:
-      bare-url: 2.1.5
+      bare-url: 2.1.6
     optional: true
 
-  bare-module-resolve@1.10.2(bare-url@2.1.5):
+  bare-module-resolve@1.10.2(bare-url@2.1.6):
     dependencies:
       bare-semver: 1.0.1
     optionalDependencies:
-      bare-url: 2.1.5
+      bare-url: 2.1.6
     optional: true
 
   bare-os@3.6.1:
@@ -279,7 +292,7 @@ snapshots:
   bare-semver@1.0.1:
     optional: true
 
-  bare-url@2.1.5:
+  bare-url@2.1.6:
     dependencies:
       bare-path: 3.0.0
     optional: true
@@ -396,8 +409,8 @@ snapshots:
 
   require-addon@1.1.0:
     dependencies:
-      bare-addon-resolve: 1.9.4(bare-url@2.1.5)
-      bare-url: 2.1.5
+      bare-addon-resolve: 1.9.4(bare-url@2.1.6)
+      bare-url: 2.1.6
     optional: true
 
   safe-buffer@5.2.1: {}
@@ -417,5 +430,7 @@ snapshots:
   tweetnacl@1.0.3: {}
 
   typescript@5.8.3: {}
+
+  undici-types@6.21.0: {}
 
   urijs@1.19.11: {}
