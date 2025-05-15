@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
     'passkey-factory-sdk', 
     'passkey-kit-sdk',
     'sac-sdk',
+    'chat-demo-sdk',
   ],
   output: "standalone"
 };
